@@ -17,6 +17,7 @@ keystore/
 broadcast/
 logFile.txt
 *.log
+DeployWalletKeyStoreFile.json
 
 # Certora
 .certora_internal/

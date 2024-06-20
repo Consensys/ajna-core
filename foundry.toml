@@ -14,12 +14,15 @@ remappings = [
 ]
 verbosity           = 2
 block_timestamp     = 1_672_372_127
-block_number        = 16_295_000
-fork_block_number   = 16_295_000
+block_number        = 16_295_00
+fork_block_number   = 16_295_00
 rpc_storage_caching = { chains = ["mainnet"], endpoints = "all" }
 optimizer           = true
 optimizer_runs      = 0
 fs_permissions      = [{ access = "read-write", path = "./"}]
+
+[etherscan]
+unknown_chain = { key = "2NSEBQ54E6MSGA34B4M7DYEMT6XE98U7B9", chain = "59141", url = "https://api-sepolia.lineascan.build/api/"}
 
 [fuzz]
 runs = 300
