@@ -74,3 +74,9 @@ analyze:
 deploy-contracts:
 	forge script script/deploy.s.sol \
 		--rpc-url ${ETH_RPC_URL} --sender ${DEPLOY_ADDRESS} --keystore ${DEPLOY_KEY} --broadcast -vvv --verify
+
+# forge verify-contract --chain-id 59141 --watch 0xd72A448C3BC8f47EAfFc2C88Cf9aC9423Bfb5067 ERC20PoolFactory --constructor-args $(cast abi-encode "constructor(address)" 0x6644E78d39859C0d93E6c435b9Cf34D74ee1CEe3)
+# forge verify-contract --chain-id 59141 --watch 0x0c1Fa8D707dFb57551efa21C16255BEAb13F5bCD ERC721PoolFactory --constructor-args $(cast abi-encode "constructor(address)" 0x6644E78d39859C0d93E6c435b9Cf34D74ee1CEe3)
+# forge verify-contract --chain-id 59141 --watch 0x3AFcEcB6A943746eccd72eb6801E534f8887eEA1 PoolInfoUtils
+# forge verify-contract --chain-id 59141 --watch 0x38d55d1f2100dB1423C4907Aa907D47B4670d5EF PoolInfoUtilsMulticall --constructor-args $(cast abi-encode "constructor(address)" 0x3AFcEcB6A943746eccd72eb6801E534f8887eEA1)
+# forge verify-contract --chain-id 59141 --watch 0x083BDB49dBA6f5A225a20893e043220526DeCf54 PositionManager --constructor-args $(cast abi-encode "constructor(address,address)" 0xd72A448C3BC8f47EAfFc2C88Cf9aC9423Bfb5067 0x0c1Fa8D707dFb57551efa21C16255BEAb13F5bCD)
