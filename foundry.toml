@@ -20,19 +20,9 @@ rpc_storage_caching = { chains = ["mainnet"], endpoints = "all" }
 optimizer           = true
 optimizer_runs      = 0
 fs_permissions      = [{ access = "read-write", path = "./"}]
-"libraries" = [
-    "src/libraries/external/BorrowerActions.sol:BorrowerActions:0xdc440E2b44Eb172A04ed7f12379b1e8BB895cE97",
-    "src/libraries/external/KickerActions.sol:KickerActions:0x131D5c971571f2715e7Fffd02992989e0dDe360b",
-    "src/libraries/external/LPActions.sol:LPActions:0x571A8461C2986D16fb406A484bF95150Fe24DDd6",
-    "src/libraries/external/LenderActions.sol:LenderActions:0x13ce580349De92A01EdaE9BC63eE6A55B0E89ca7",
-    "src/libraries/external/PoolCommons.sol:PoolCommons:0x52fE5f6ae1815614B2709Eb6C678CaEC149e9658",
-    "src/libraries/external/PositionNFTSVG.sol:PositionNFTSVG:0xFAab18147BA80e9F8D97CEE524b5b46e11D9D7c3",
-    "src/libraries/external/SettlerActions.sol:SettlerActions:0xB9F9ab798c7403A52564841c0EC1185d595CD584",
-    "src/libraries/external/TakerActions.sol:TakerActions:0x42B6deF5Bef2EAD914e3BaD9cE6DEFB132Ed3cE3"
-]
 
 [etherscan]
-unknown_chain = { key = "2NSEBQ54E6MSGA34B4M7DYEMT6XE98U7B9", chain = "59141", url = "https://api-sepolia.lineascan.build/api/"}
+unknown_chain = { key = "2NSEBQ54E6MSGA34B4M7DYEMT6XE98U7B9", chain = "59144", url = "https://api.lineascan.build/api"}
 
 [fuzz]
 runs = 300
