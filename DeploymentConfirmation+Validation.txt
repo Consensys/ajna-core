@@ -1,0 +1,50 @@
+// Terminal message for deployment - start
+  All (15) contracts were verified!
+
+  Transactions saved to: /workspaces/ajna-core/broadcast/deploy.s.sol/59144/run-latest.json
+
+  Sensitive values saved to: /workspaces/ajna-core/cache/deploy.s.sol/59144/run-latest.json
+
+  Deploying to chain with AJNA token address 0x36607298fBfABAc509B3d24BF02777d372A38DD4
+  === Deployment addresses ===
+  ERC20PoolFactory       0xd72A448C3BC8f47EAfFc2C88Cf9aC9423Bfb5067
+  ERC721PoolFactory      0x0c1Fa8D707dFb57551efa21C16255BEAb13F5bCD
+  PoolInfoUtils          0x3AFcEcB6A943746eccd72eb6801E534f8887eEA1
+  PoolInfoUtilsMulticall 0x38d55d1f2100dB1423C4907Aa907D47B4670d5EF
+  PositionManager        0x083BDB49dBA6f5A225a20893e043220526DeCf54
+// Terminal message for deployment - end
+
+// Deploying a pool as validation test for mainnet for deployment - start
+  cast send 0xd72A448C3BC8f47EAfFc2C88Cf9aC9423Bfb5067 "deployPool(address,address,uint256)(address)" \
+    0x36607298fBfABAc509B3d24BF02777d372A38DD4 0xA219439258ca9da29E9Cc4cE5596924745e12B93 50000000000000000 \
+    --from 0x790Fb50C342f098Abb1216594cCC3825b932D040 --keystore ./DeployWalletKeyStoreFile.json
+
+  // Pool deployment response - start
+    blockHash               0x44463f37690eb190baacdf0aac4e6c7345fde9d94638c5a923f988834d3e8092
+    blockNumber             5773404
+    contractAddress         
+    cumulativeGasUsed       818472
+    effectiveGasPrice       60000007
+    from                    0x790Fb50C342f098Abb1216594cCC3825b932D040
+    gasUsed                 289429
+    logs                    [{"address":"0xd72a448c3bc8f47eaffc2c88cf9ac9423bfb5067","topics":["0xee1fe091a5213b321c2662b35c0b7cd0d35d10dbcab52b3c9b8768983c67bce3"],"data":"0x000000000000000000000000ee4b1f694a5f31897c0f9bf9dd471f5d8d44fdee2263c4378b4920f0bef611a3ff22c506afa4745b3319c50b6d704a874990b8b2","blockHash":"0x44463f37690eb190baacdf0aac4e6c7345fde9d94638c5a923f988834d3e8092","blockNumber":"0x58185c","transactionHash":"0x84fe75a0cde62ef9cfe6a122cdc481e6c0fa56626675f7f54de2b5647794cb3d","transactionIndex":"0x5","logIndex":"0xf","removed":false}]
+    logsBloom               0x00000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000040000000000000000000000000000000000040000000000000000000000000000000000000000000000
+    root                    
+    status                  1 (success)
+    transactionHash         0x84fe75a0cde62ef9cfe6a122cdc481e6c0fa56626675f7f54de2b5647794cb3d
+    transactionIndex        5
+    type                    2
+    blobGasPrice            
+    blobGasUsed             
+    to                      0xd72A448C3BC8f47EAfFc2C88Cf9aC9423Bfb5067
+  // Pool deployment response - end
+
+  // Calling deployment to get pool address
+    export ERC20_NON_SUBSET_HASH=0x2263c4378b4920f0bef611a3ff22c506afa4745b3319c50b6d704a874990b8b2
+    cast call 0xd72A448C3BC8f47EAfFc2C88Cf9aC9423Bfb5067 "deployedPools(bytes32,address,address)(address)" \
+    ${ERC20_NON_SUBSET_HASH} 0x36607298fBfABAc509B3d24BF02777d372A38DD4 0xA219439258ca9da29E9Cc4cE5596924745e12B93
+
+  // Pool deployment address response
+    0xEE4B1f694a5f31897c0f9BF9dd471F5d8D44FdEe
+
+// Deploying a pool as validation test for mainnet for deployment - end
